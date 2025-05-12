@@ -1,15 +1,76 @@
+@charset "UTF-8";
 @font-face {
   font-family: 'Comic';
-  src: url(./fonts/comic.ttf) format("truetype");
+  src: url("./fonts/TT Lakes Neue Trial Extended Bold.ttf") format("truetype");
   font-weight: normal;
   font-style: italic; }
 
 body {
-  padding: 1rem;
+  padding: 0;
   margin: 0;
   font-family: Comic, sans-serif;
-  background-color: #24292e;
-  color: #fff; }
+  background-color: #F8F8F8;
+  color: #1B1C21; }
+
+button {
+  background: none;
+  /* Убираем фоновый цвет */
+  border: none;
+  /* Убираем рамку */
+  padding: 0;
+  /* Убираем отступы */
+  margin: 0;
+  /* Убираем внешние отступы */
+  font: inherit;
+  /* Наследуем шрифт от родителя */
+  color: inherit;
+  /* Наследуем цвет текста от родителя */
+  cursor: pointer;
+  /* Указываем, что это кнопка */
+  outline: none;
+  /* Убираем обводку при фокусе (по желанию) */ }
+
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #D9FFF5;
+  height: 88px;
+  padding: 0;
+  margin: 0; }
+  header .header__button {
+    background-color: #FF3E79;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%; }
+    header .header__button svg {
+      padding: 25%;
+      height: 40px;
+      width: 40px; }
+  header .header__icon-group__right {
+    display: flex;
+    justify-content: flex-start;
+    height: 88px; }
+    header .header__icon-group__right .header__button {
+      margin: 24px 24px 24px 24px; }
+  header .header__icon-group__left {
+    display: flex;
+    justify-content: flex-end;
+    height: 88px; }
+    header .header__icon-group__left .header__button,
+    header .header__icon-group__left .header__line {
+      margin: 24px 24px 24px 0px; }
+    header .header__icon-group__left .header__logo {
+      margin: 18.59px 24px 18.59px 0px; }
+  header .header__logo {
+    width: 96.55px;
+    height: 50.81px;
+    margin: inherit;
+    padding: inherit; }
+  header .header__line {
+    width: 2px;
+    height: 32px;
+    background-color: #EAEAEA; }
 
 
 /*# sourceMappingURL=style.css.map*/
