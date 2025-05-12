@@ -1,17 +1,84 @@
-$bgColor: #24292e;
-$text: #fff;
+$bgColor: #F8F8F8;
+$bg2Color: #FFFFFF;
+$brColor: #D9FFF5;
+$btColor: #FF3E79;
+$hlColor: #EAEAEA;
+$text: #1B1C21;
 
 @font-face {
   font-family: 'Comic';
-  src: url('../fonts/comic.ttf') format('truetype');
+  src: url('../fonts/TT Lakes Neue Trial Extended Bold.ttf') format('truetype');
   font-weight: normal;
   font-style: italic;
 }
 
 body {
-  padding: 1rem;
+  padding: 0;
   margin: 0;
   font-family: Comic, sans-serif;
   background-color: $bgColor;
   color: $text;
+}
+
+button {
+  background: none; /* Убираем фоновый цвет */
+  border: none; /* Убираем рамку */
+  padding: 0; /* Убираем отступы */
+  margin: 0; /* Убираем внешние отступы */
+  font: inherit; /* Наследуем шрифт от родителя */
+  color: inherit; /* Наследуем цвет текста от родителя */
+  cursor: pointer; /* Указываем, что это кнопка */
+  outline: none; /* Убираем обводку при фокусе (по желанию) */
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: $bg2Color;
+  border-bottom: 1px solid $brColor;
+  height: 88px;
+  padding: 0;
+  margin: 0;
+  .header__button {
+    background-color: $btColor;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    svg {
+      padding: 25%;
+      height: 40px;
+      width: 40px;
+    }
+  }
+  .header__icon-group__right {
+    display: flex;
+    justify-content: flex-start;
+    height: 88px;
+    .header__button {
+      margin: 24px 24px 24px 24px;
+    }
+  }
+  .header__icon-group__left {
+    display: flex;
+    justify-content: flex-end;
+    height: 88px;
+    .header__button, 
+    .header__line {
+      margin: 24px 24px 24px 0px;
+    }
+    .header__logo {
+      margin: 18.59px 24px 18.59px 0px;
+    }
+  }
+  .header__logo {
+    width: 96.55px;
+    height: 50.81px;
+    margin: inherit;
+    padding: inherit;
+  }
+  .header__line {
+    width: 2px;
+    height: 32px;
+    background-color: $hlColor;
+  }
 }
